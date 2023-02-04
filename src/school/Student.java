@@ -370,6 +370,7 @@ public class Student extends javax.swing.JFrame {
         } catch (Exception e) 
         {
             System.out.println(e);
+            System.out.println("data is not add to the database");
         }
     }//GEN-LAST:event_submitActionPerformed
 

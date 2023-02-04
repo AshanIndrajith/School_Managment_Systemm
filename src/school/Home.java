@@ -129,11 +129,14 @@ public class Home extends javax.swing.JFrame {
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
         setVisible(false);
+        
         try {
-            Login log = new  Login();
+            Login log = new Login();
         } catch (SQLException ex) {
             Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+       
         setVisible(true);
         
     }//GEN-LAST:event_logoutActionPerformed
