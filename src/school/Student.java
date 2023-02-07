@@ -389,6 +389,45 @@ public class Student extends javax.swing.JFrame {
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         // TODO add your handling code here:
+        
+       try{
+           
+           stmt=con.createStatement();
+           
+           int sId=Integer.parseInt(id.getText());
+           String query ="SELECT * FROM student";
+           rs=stmt.executeQuery(query);
+           
+           while(rs.next())
+           {
+           
+               if(sId ==rs.getInt("id"))
+               {
+               
+               name.setText(rs.getString("name"));
+               address.setText(rs.getString("address"));
+               grade.setSelectedItem(rs.getString("grade"));
+               age.setText(String.format("%s",rs.getInt("age")));
+               dob.setText(String.format("%td",rs.getDate("birthday")));
+               gender.setSelectedItem(rs.getString("gender"));
+               admition.setText(String.format("%td",rs.getDate("admission")));
+               
+               
+               
+               
+               
+               }
+           }
+           
+           
+           
+       
+       }
+       catch(SQLException ex) {
+       
+           System.out.println("error");
+       }
+     
     }//GEN-LAST:event_searchActionPerformed
 
     /**
