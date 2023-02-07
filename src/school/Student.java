@@ -414,11 +414,13 @@ public class Student extends javax.swing.JFrame {
                guadian.setText(rs.getString("guardian"));
                contact.setText(String.format(0+"%s",rs.getInt("contact")));
                
-               else
-               
-               
-               
+              
                               }
+               
+               else{
+               
+                JOptionPane.showMessageDialog(null,"There is no selected data");
+               }
            }
            
            
