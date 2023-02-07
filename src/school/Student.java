@@ -411,12 +411,14 @@ public class Student extends javax.swing.JFrame {
                dob.setText(String.format("%td",rs.getDate("birthday")));
                gender.setSelectedItem(rs.getString("gender"));
                admition.setText(String.format("%td",rs.getDate("admission")));
+               guadian.setText(rs.getString("guardian"));
+               contact.setText(String.format(0+"%s",rs.getInt("contact")));
+               
+               else
                
                
                
-               
-               
-               }
+                              }
            }
            
            
@@ -425,7 +427,7 @@ public class Student extends javax.swing.JFrame {
        }
        catch(SQLException ex) {
        
-           System.out.println("error");
+           System.out.println("There is no selected data ");
        }
      
     }//GEN-LAST:event_searchActionPerformed
